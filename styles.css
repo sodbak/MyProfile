@@ -13,7 +13,9 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: url(header.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: space-between;
      align-items: center;
@@ -25,6 +27,10 @@ body{
     color:rgb(208, 0, 255);
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+   
 }
 .navbar a{
     display: inline-block;
@@ -34,6 +40,8 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 
 .navbar a:hover{
@@ -57,6 +65,8 @@ body{
 .home-content h3{
     font-size: 32px;
     font-weight: 700;
+    animation: slideBottom 1s ease forward;
+    animation-delay: .7s ;
 }
 .home-content h3 span{
     color: rgb(208, 0, 255);
@@ -68,10 +78,14 @@ body{
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    
 }
 .home-content p{
     font-size: 20px;
-}
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+} 
 .home-sci a{
     display: inline-flex;
     justify-content: center;
@@ -107,5 +121,62 @@ body{
     0 0 25px rgb(208, 0, 255),0 0 50px rgb(208, 0, 255),
     0 0 100px rgb(208, 0, 255);
     background-color: rgb(223, 189, 192);
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(232, 232, 117, 0.61);
 
+}
+.about-img img{
+ width: 50%;
+ border-radius: 50%;
+ 
+ margin-left: 200px;
+}
+.about-text{
+ width: 100%;
+ padding: 40px;
+}
+
+.about-text h2{
+    font-size: 60px;
+    color: rgb(208, 0, 255);
+
+}
+.about-text h2 span{
+    color:#0ef;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #0d0d0d;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color:#0d0d0d;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
